@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:text="Проверка почты"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/app_bar"
+        app:layout_constraintEnd_toEndOf="@+id/app_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/app_bar" />
+
+    <TextView
+        android:id="@+id/foxfox"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:text="Отменить"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/app_bar"
+        app:layout_constraintEnd_toEndOf="@+id/app_bar"
+        app:layout_constraintTop_toTopOf="@+id/app_bar" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/email_verification_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Подтверждение Email"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Вам на почту был отпрален 6-значный код, который необходимо ввести ниже для завершения"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <EditText
+        android:id="@+id/editText30"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:inputType="numberDecimal"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText29"
+        app:layout_constraintEnd_toStartOf="@+id/editText29"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText29" />
+
+    <EditText
+        android:id="@+id/editText28"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText27"
+        app:layout_constraintEnd_toStartOf="@+id/editText27"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText29"
+        app:layout_constraintTop_toTopOf="@+id/editText27" />
+
+    <EditText
+        android:id="@+id/editText27"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText26"
+        app:layout_constraintEnd_toStartOf="@+id/editText26"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText28"
+        app:layout_constraintTop_toTopOf="@+id/editText26" />
+
+    <EditText
+        android:id="@+id/editText25"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:inputType="numberDecimal"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText26"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <EditText
+        android:id="@+id/editText26"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText25"
+        app:layout_constraintEnd_toStartOf="@+id/editText25"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText27"
+        app:layout_constraintTop_toTopOf="@+id/editText25" />
+
+    <EditText
+        android:id="@+id/editText29"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText28"
+        app:layout_constraintEnd_toStartOf="@+id/editText28"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText30"
+        app:layout_constraintTop_toTopOf="@+id/editText28" />
+
+
+    <TextView
+        android:id="@+id/again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/underline"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/r_rectangle"
+        android:text="Отправить код"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+</android.support.constraint.ConstraintLayout>

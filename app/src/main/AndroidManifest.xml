@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cleanitkz.nurs.hscroll">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/app_icon"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BasketActivity"
+            android:label="Корзина">
+        </activity>
+        <activity
+            android:name=".RegistrationActivity">
+        </activity>
+        <activity
+            android:name=".ShowCatalog"
+            android:label="">
+        </activity>
+        <activity
+            android:label=""
+            android:name=".ActivityOrder">
+        </activity>
+        <activity
+            android:label=""
+            android:name=".Second">
+        </activity>
+        <activity
+            android:label=""
+            android:name=".WelcomeActivity">
+        </activity>
+        <activity
+            android:label="Мой аккаунт"
+            android:name=".AccountActivity">
+        </activity>
+        <activity
+            android:name=".cityActivity">
+        </activity>
+        <activity
+            android:name=".RegConfirmActivity">
+        </activity>
+        <activity android:name=".QandAActivity"/>
+        <activity android:name=".EmailSend"/>
+        <activity android:name=".WelcomeCityActivity"/>
+        <activity
+            android:name=".AuthActivity">
+        </activity>
+        <activity
+            android:name=".EditAccActivity">
+        </activity>
+        <activity
+        android:name=".AuthConfirmActivity">
+        </activity>
+        <activity
+            android:name=".CalendarActivity">
+        </activity>
+        <activity
+            android:name=".Ques">
+        </activity>
+        <activity
+            android:name=".myOrders">
+        </activity>
+        <activity
+            android:name=".ShowOrderActivity">
+        </activity>
+        <activity
+            android:name=".CalendarActivity12">
+        </activity>
+        <activity
+            android:name=".CalendarActivity2">
+        </activity>
+        <activity
+            android:name=".CalendarActivity22">
+        </activity>
+        <activity android:name=".EmptyBasket">
+        </activity>
+        <activity android:name=".NoConnectionActivity"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+</manifest>
