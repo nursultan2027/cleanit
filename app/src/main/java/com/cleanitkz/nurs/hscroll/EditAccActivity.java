@@ -6,8 +6,9 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -26,6 +27,8 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Calendar;
+
+
 public class EditAccActivity extends AppCompatActivity {
     private ImageView img;
     private TextView txtSex, pdf, gogogo, birth, finish, label;

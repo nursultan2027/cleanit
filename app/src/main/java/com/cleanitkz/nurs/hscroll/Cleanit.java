@@ -1,6 +1,6 @@
 package com.cleanitkz.nurs.hscroll;
 
-import android.databinding.ObservableField;
+import androidx.databinding.ObservableField;
 
 public class Cleanit {
     public ObservableField<String> getScore() {

@@ -1,21 +1,16 @@
 package com.cleanitkz.nurs.hscroll;
 
 import android.app.Activity;
-        import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
-        import android.content.Intent;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.AsyncTask;
         import android.os.Bundle;
-        import android.support.constraint.ConstraintLayout;
-import android.view.LayoutInflater;
+        import androidx.constraintlayout.widget.ConstraintLayout;
+
 import android.view.View;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
         import android.widget.EditText;
@@ -33,7 +28,6 @@ import android.widget.TextView;
         import java.io.OutputStreamWriter;
         import java.net.HttpURLConnection;
         import java.net.URL;
-import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.FormBody;

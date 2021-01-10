@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,11 +8,13 @@
     android:background="#efeef3"
     tools:context=".CalendarActivity12">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/toolbarr"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@color/colorPrimaryDark"></android.support.v7.widget.Toolbar>
+        android:background="@color/colorPrimaryDark" />
 
     <TextView
         android:id="@+id/tttitttle"
@@ -49,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarr" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -62,7 +64,7 @@
             android:layout_height="1sp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></View>
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/day1"
@@ -95,7 +97,7 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="@+id/day1"
-            app:layout_constraintTop_toBottomOf="@+id/button2"></View>
+            app:layout_constraintTop_toBottomOf="@+id/button2"/>
 
         <TextView
             android:id="@+id/day2"
@@ -128,7 +130,7 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="@+id/day2"
-            app:layout_constraintTop_toBottomOf="@+id/button3"></View>
+            app:layout_constraintTop_toBottomOf="@+id/button3"/>
 
         <TextView
             android:id="@+id/h3"
@@ -183,7 +185,7 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="@+id/view5"
-            app:layout_constraintTop_toBottomOf="@+id/button4"></View>
+            app:layout_constraintTop_toBottomOf="@+id/button4"/>
 
         <TextView
             android:id="@+id/h4"
@@ -227,7 +229,7 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="@+id/view6"
-            app:layout_constraintTop_toBottomOf="@+id/button6"></View>
+            app:layout_constraintTop_toBottomOf="@+id/button6"/>
 
         <TextView
             android:id="@+id/h5"
@@ -283,7 +285,7 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="@+id/view7"
-            app:layout_constraintTop_toBottomOf="@+id/button7"></View>
+            app:layout_constraintTop_toBottomOf="@+id/button7"/>
 
         <TextView
             android:id="@+id/h6"
@@ -316,7 +318,7 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="@+id/view7"
-            app:layout_constraintTop_toBottomOf="@+id/button8"></View>
+            app:layout_constraintTop_toBottomOf="@+id/button8"/>
 
         <TextView
             android:id="@+id/day7"
@@ -350,7 +352,7 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button10"></View>
+            app:layout_constraintTop_toBottomOf="@+id/button10"/>
 
         <TextView
             android:id="@+id/h8"
@@ -405,7 +407,7 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="@+id/day7"
-            app:layout_constraintTop_toBottomOf="@+id/button9"></View>
+            app:layout_constraintTop_toBottomOf="@+id/button9"/>
 
         <TextView
             android:id="@+id/h9"
@@ -438,7 +440,7 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toBottomOf="@+id/button5"></View>
+            app:layout_constraintTop_toBottomOf="@+id/button5"/>
 
         <TextView
             android:id="@+id/h10"
@@ -506,6 +508,6 @@
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button11"></View>
-    </android.support.constraint.ConstraintLayout>
-</android.support.constraint.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@+id/button11"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

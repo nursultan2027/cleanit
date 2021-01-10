@@ -5,12 +5,13 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.gson.Gson;
 
@@ -95,46 +96,40 @@ public class WelcomeCityActivity extends AppCompatActivity {
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    try {
-                        if(!city.isEmpty())
-                        {
-                            GetDate();
-                            btn1.setEnabled(false);
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                    if(!city.isEmpty())
+                    {
+                        GetDate();
+                        btn1.setEnabled(false);
                     }
                 }
             });
         }
 
-    public void GetDate() throws JSONException {
-        final OkHttpClient client = new OkHttpClient();
-                final AsyncTask<Void, Void, Void> anTsk = new AsyncTask<Void, Void, Void>() {
-                    @Override
-                    protected void onPreExecute() {
-                        super.onPreExecute();
-                        setContentView(R.layout.activity_main);
-                        PostToken();
-                    }
-
-                    @Override
-                    protected Void doInBackground(Void... voids) {
-                        return null;
-                    }
-
-                    @Override
-                    protected void onPostExecute(Void result) {
-                        super.onPostExecute(result);
-                        try {
-                            GetProductVersion();
-                            GetProducts();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                };
-                anTsk.execute();
+    public void GetDate() {
+        setContentView(R.layout.activity_main);
+        PostToken();
+//        final OkHttpClient client = new OkHttpClient();
+//                final AsyncTask<Void, Void, Void> anTsk = new AsyncTask<Void, Void, Void>() {
+//                    @Override
+//                    protected void onPreExecute() {
+//                        super.onPreExecute();
+//                        setContentView(R.layout.activity_main);
+//                        PostToken();
+//                    }
+//
+//                    @Override
+//                    protected Void doInBackground(Void... voids) {
+//                        return null;
+//                    }
+//
+//                    @Override
+//                    protected void onPostExecute(Void result) {
+//                        super.onPostExecute(result);
+//                        GetProductVersion();
+//                        GetProducts();
+//                    }
+//                };
+//                anTsk.execute();
     }
 
     public void categsList() throws JSONException {
@@ -186,6 +181,11 @@ public class WelcomeCityActivity extends AppCompatActivity {
             categoryArrayList.add(ctt1);
         }
         fHelper.writePriceFile("ok");
+        fHelper.writeFile1(st);
+        fHelper.writeFile2(st2);
+        fHelper.wrteWelcomeFile("OK");
+        startActivity(second);
+        finish();
     }
 
     public String replacePhoto(String str1){
@@ -210,9 +210,6 @@ public class WelcomeCityActivity extends AppCompatActivity {
             protected String doInBackground(Void... params) {
                 try {
                     Response response = client.newCall(request).execute();
-                    if (!response.isSuccessful()) {
-                        return null;
-                    }
                     return response.body().string();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -229,7 +226,7 @@ public class WelcomeCityActivity extends AppCompatActivity {
                         pageName = obj.getString(SAVED_TEXT);
                         fHelper.writeTokenFile(pageName);
                         Basket.token = pageName;
-
+                        GetProductVersion(pageName);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -239,12 +236,12 @@ public class WelcomeCityActivity extends AppCompatActivity {
         asyncTask.execute();
     }
 
-    public void GetProductVersion()    {
+    public void GetProductVersion(String tokenValue)    {
         final OkHttpClient client = new OkHttpClient();
         final Request request2 = new Request.Builder()
                 .url("http://cleanitapp.kz/v1/api/clients/settings")
                 .get()
-                .addHeader("token", Basket.token)
+                .addHeader("token", tokenValue)
                 .build();
         AsyncTask<Void, Void, String> asyncTask1 = new AsyncTask<Void, Void, String>() {
             @Override
@@ -267,8 +264,9 @@ public class WelcomeCityActivity extends AppCompatActivity {
                 if (s1 != null) {
                     try {
                         JSONObject jsonObject = new JSONObject(s1);
-                         fHelper.writeProductVersionFile(String.valueOf(jsonObject.getInt("version")));
-                        } catch (JSONException e) {
+                        fHelper.writeProductVersionFile(String.valueOf(jsonObject.getInt("version")));
+                        GetProducts();
+                    } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
@@ -277,14 +275,14 @@ public class WelcomeCityActivity extends AppCompatActivity {
         asyncTask1.execute();
     }
 
-    public void GetProducts() throws JSONException {
+    public void GetProducts() {
 
         final Request request2 = new Request.Builder()
                 .url("http://cleanitapp.kz/v1/api/clients/products")
                 .get()
                 .addHeader(SAVED_TEXT, Basket.token)
                 .build();
-        AsyncTask<Void, Void, String> asyncTask1 = new AsyncTask<Void, Void, String>() {
+        AsyncTask<Void, Void, String> asyncTask2 = new AsyncTask<Void, Void, String>() {
             @Override
             protected String doInBackground(Void... params) {
                 try {
@@ -306,20 +304,12 @@ public class WelcomeCityActivity extends AppCompatActivity {
                     try {
                         ff = new JSONArray(s1);
                         categsList();
-                        TimeUnit.MILLISECONDS.sleep(100);
-                        fHelper.writeFile1(st);
-                        fHelper.writeFile2(st2);
-                        fHelper.wrteWelcomeFile("OK");
-                        startActivity(second);
-                        finish();
                     } catch (JSONException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
             }
         };
-        asyncTask1.execute();
+        asyncTask2.execute();
     }
 }

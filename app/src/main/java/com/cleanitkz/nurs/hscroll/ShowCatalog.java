@@ -2,16 +2,16 @@ package com.cleanitkz.nurs.hscroll;
 
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.databinding.DataBindingUtil;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;

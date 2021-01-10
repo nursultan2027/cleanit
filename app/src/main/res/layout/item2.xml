@@ -1,4 +1,4 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/prod_img"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/prod_dis"
@@ -36,7 +36,7 @@
         android:textColor="#95a5a6"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/prod_img"
-        app:layout_constraintTop_toBottomOf="@+id/prod_name"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/prod_name"/>
 
     <TextView
         android:id="@+id/prod_price"
@@ -94,4 +94,4 @@
         android:background="@color/colorPrimaryLight"
         app:layout_constraintTop_toBottomOf="@+id/btnMinus"
         tools:layout_editor_absoluteX="0dp" />
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
